@@ -1,6 +1,6 @@
 # To Do app TASK MANAGER
 
-### _Task manager app using create-reaact-app typescript, styled component and jest, jest/dom & testing library  for unit testing _  
+### _Task manager app using create-reaact-app typescript, styled component and jest, jest/dom & testing library  for unit testing_  
  Watch live :
 
  
