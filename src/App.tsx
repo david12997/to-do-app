@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import { ThemeProvider } from 'styled-components';
+import { Board } from './components/application/board';
+
+import { Nav } from './components/application/nav';
+import { Search } from './components/application/task';
+import { Page, theme } from './components/theme';
+import { Head } from './components/landing/head';
+import { User } from './components/landing/user';
+import { Section } from './components/landing/section';
+import { Footer } from './components/footer';
+
+
+
+function App():JSX.Element {
+
+  const [user, setUser ] = useState< string | null>(null);
+  const [board, setBoard] = useState <object | any >(null);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+        {
+          user === null ?
+          <Page>
+            <Head/>
+            <User setUser={setUser} />
+            <Section/>
+            <Footer/>
+          </Page>
+          :
+          <Page>
+            <Nav setBoard={setBoard} setUser={setUser}/>
+            <Search user={user} setBoard={setBoard} />
+            <Board  setBoard={setBoard} user={user} tasks={board}></Board>
+            <Footer/>
+          </Page>
+
+        }
+      </ThemeProvider>
+
     </div>
   );
 }
