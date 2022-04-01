@@ -13,7 +13,7 @@
 ![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/task-desktop-user-1.png)
 
 #### Application
-![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/task-desktop-user-2.png)
+![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/to-do-desktop-yes.png)
 
 
 ## UI Mobile
