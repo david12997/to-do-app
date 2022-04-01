@@ -23,8 +23,8 @@
 ![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/task-mobile-2.png)
 
 #### Application
-![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/task-mobile-user-1.png)
-![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/task-mobile-2.png)
+![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/to-do-mobile-yes.png)
+
 
 ## Class diagram
 -simple class diagram where the TASK class implements the taskUser interface
