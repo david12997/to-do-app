@@ -1,8 +1,10 @@
 # To Do app TASK MANAGER
 
 ### _Task manager app using create-reaact-app typescript, styled component and jest, jest/dom & testing library  for unit testing_  
- Watch live :
 
+#### Watch live :
+
+- You can create, read, edit and delete task also you cant have multiple user for managas your task 
  
 ## UI Desktop 
 
