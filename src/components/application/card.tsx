@@ -195,8 +195,13 @@ export const Card = (props:propsCard):JSX.Element =>{
            </div>
             <div className="card__changeState">
                 <label>Change state: </label>
-                <select data-testid="select" onChange={(e)=>UpdateTask(e,'status')} name="sate-task">
-                    <option value='red'>Pending</option>
+                <select 
+                    data-testid="select" 
+                    onChange={(e)=>UpdateTask(e,'status')} 
+                    name="sate-task"
+                >
+                    <option selected  value={props.status} >{ props.status === 'red' ? 'Pending' : props.status === 'orange' ? 'Working' : 'Finished'}</option>
+                    <option  value='red'>Pending</option>
                     <option value='orange'>Working</option>
                     <option value='green'>Finished</option>
                 </select>
