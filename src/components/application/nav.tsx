@@ -41,8 +41,13 @@ type PropsNav = {
 export const Nav = (props:PropsNav):JSX.Element =>{
 
     return<NavStyles>
-        <FontAwesomeIcon onClick={()=>{props.setUser(null);props.setBoard(null)}} className='nav__arrow'  icon={faArrowLeft}/>
-        <b className='nav__title'>What do you need to do today?</b>
+        <FontAwesomeIcon 
+            onClick={()=>{props.setUser(null);props.setBoard(null)}} 
+            className='nav__arrow'  icon={faArrowLeft}
+            data-testid="arrow"
+           
+        />
+        <b   className='nav__title'>What do you need to do today?</b>
     </NavStyles>
 
 }

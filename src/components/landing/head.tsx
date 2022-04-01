@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyleHead = styled.div`
 
     grid-area: navbar ;
-    background:orange ;
+    background:${({theme})=>theme.colors.orange};
     height:70px;
 
     & .head__nav{
@@ -16,7 +16,7 @@ const StyleHead = styled.div`
         font-size:22px ;
         height:100% ;
         font-family: cursive;
-        color:white;
+        color:${({theme})=>theme.colors.white};
         text-shadow:0px 0px 6px rgba(0,0,0,0.4) ;
     }
 

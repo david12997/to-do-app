@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import { formatDistance, formatRelative, setDate, subDays } from 'date-fns';
+import { formatDistance, formatRelative } from 'date-fns';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDeleteLeft, faFilePen } from "@fortawesome/free-solid-svg-icons";
 import { Task } from "../../services/Task";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 
 const StyleCard = styled.div`
@@ -22,7 +22,7 @@ const StyleCard = styled.div`
         height:200px;
         border-radius:6px;
         box-shadow:2px 2px 15px rgba(0,0,0,0.3);
-        background:#edede5;
+        background:${({theme})=>theme.colors.gray};
         position:relative ;
     }
 
@@ -32,7 +32,7 @@ const StyleCard = styled.div`
         justify-content:center;
         padding:7px ;
         font-size:18px ;
-        color:black;
+        color:${({theme})=>theme.colors.black};
     }
 
     & .card__status, .card__changeState{
@@ -53,15 +53,15 @@ const StyleCard = styled.div`
 
     & .card__state--pending{
 
-        color:red;
+        color:${({theme})=>theme.colors.red};
     }
     & .card__state--working{
 
-        color:orange;
+        color:${({theme})=>theme.colors.orange};
     }
     & .card__state--finished{
 
-        color:green;
+        color:${({theme})=>theme.colors.green};
     }
 
     & .card__actions{
@@ -85,7 +85,7 @@ const StyleCard = styled.div`
 
     & .card__btn--delete{
 
-        color:red
+        color:${({theme})=>theme.colors.red};
     }
 
     & .card__btn--edit{
@@ -177,7 +177,7 @@ export const Card = (props:propsCard):JSX.Element =>{
                 }
                <b>{props.do}</b>
             </div>
-            <div className="card__status">
+            <div data-testid="status-task" className="card__status">
                 <p>
                     Status task:  
                     { 
@@ -195,7 +195,7 @@ export const Card = (props:propsCard):JSX.Element =>{
            </div>
             <div className="card__changeState">
                 <label>Change state: </label>
-                <select onChange={(e)=>UpdateTask(e,'status')} name="sate-task">
+                <select data-testid="select" onChange={(e)=>UpdateTask(e,'status')} name="sate-task">
                     <option value='red'>Pending</option>
                     <option value='orange'>Working</option>
                     <option value='green'>Finished</option>
@@ -203,11 +203,11 @@ export const Card = (props:propsCard):JSX.Element =>{
             </div>
             <div className="card__actions">
 
-               <div onClick={()=>EditTask()} className="card__btn card__btn--edit">
+               <div data-testid="btn-edit" onClick={()=>EditTask()} className="card__btn card__btn--edit">
                    <small>Edit </small>  
                    <FontAwesomeIcon style={{marginLeft:'5px'}} icon={faFilePen}/> 
                 </div>
-               <div onClick={()=>DeleteTask()} className="card__btn card__btn--delete">
+               <div data-testid="btn-delete" onClick={()=>DeleteTask()} className="card__btn card__btn--delete">
                    <small>Delete </small> 
                     <FontAwesomeIcon style={{marginLeft:'5px'}} icon={faDeleteLeft}/>
                 </div>
@@ -216,7 +216,7 @@ export const Card = (props:propsCard):JSX.Element =>{
 
             <br></br>
 
-            <div className="card__date">
+            <div data-testid="date" className="card__date">
                <small>{SetDate(2)}</small>
             </div>
 

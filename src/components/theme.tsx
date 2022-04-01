@@ -1,10 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 
 export const theme = {
 
     colors:{
         orange:'orange',
+        white:'white',
+        black:'black',
+        red:'red',
+        green:'green',
+        gray:'#edede5'
     },
     areas:` "navbar navbar"
             "main main"

@@ -18,7 +18,7 @@ const StyleSection = styled.div`
         display:flex ;
         justify-content:center ;
         align-items:center ;
-        color: black;
+        color: ${({theme})=>theme.colors.black};
         font-size:20px ;
     }
 
@@ -84,7 +84,7 @@ export const Section = ():JSX.Element =>{
                     <li>Create multi-users and manage your task more organizate and focus</li>
                 </div>
                 <div className="section__image">
-                    <img width='100%' src="img/board-1.png"></img>
+                    <img alt="image board task" width='100%' src="img/board-1.png"></img>
                 </div>
                 
             </div>

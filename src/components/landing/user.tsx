@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyleUser = styled.div`
 
     grid-area: main ;
-    background:white ;
+    background:${({theme})=>theme.colors.white};
     margin-bottom:30px ;
 
     & .user{
@@ -47,7 +47,7 @@ const StyleUser = styled.div`
         width:101%;
         height:50px;
         background:black ;
-        color:white;
+        color:${({theme})=>theme.colors.white};
         font-family:cursive ;
         font-size:20px;
         border:0px;
@@ -90,7 +90,7 @@ export const User = (props:PropsNewUser):JSX.Element =>{
         <div className="user">
 
             <div className="user__image">
-                <img width='100%' src="img/notebook-task.png"></img>
+                <img  alt="image nootebok task" width='100%' src="img/notebook-task.png"></img>
             </div>
             <form onSubmit={(e)=>CreateUser(e)} className="user__form">
                 <label className="user__formLabel"><b>Create your user :</b></label>

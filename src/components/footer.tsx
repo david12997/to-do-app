@@ -3,12 +3,12 @@ import styled from "styled-components";
 const StyleFooter =  styled.div`
 
     grid-area:footer ;
-    background:orange ;
+    background:${({theme})=>theme.colors.orange} ;
     display:flex ;
     justify-content:center ;
     align-items:center ;
     font-family:cursive ;
-    color:white ;
+    color:${({theme})=>theme.colors.white}; ;
 
 `;
 
