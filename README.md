@@ -27,7 +27,8 @@
 
 
 ## Class diagram
--simple class diagram where the TASK class implements the taskUser interface
+- simple class diagram where the TASK class implements the taskUser interface
+
 ![](https://jdcastaneda.ml/tienda/wp-content/uploads/2022/04/class-diagramto-do-app.png)
 
 
